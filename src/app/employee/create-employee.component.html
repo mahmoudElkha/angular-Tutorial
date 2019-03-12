@@ -26,8 +26,42 @@
           </label>
           <label class="radio-inline">
             <input type="radio" name="preferenceContact" value="Email" [(ngModel)]="preferenceContact">
-            Female
+            Email
           </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+   <label for="department" class="control-label">
+     Department
+   </label>
+   <!--
+   <select id="department"  name="department"
+           [(ngModel)]="employee.department" class="form-control">
+     <option value="-1">Select Department</option> 
+     <option *ngFor="let dept of departments" [value]="dept.id">
+       {{dept.name}}
+     </option>
+   </select>
+  -->
+  --
+<select id ="department" name="department" [(ngModel)]=employee.department class="form-control">
+<option value=-1> select Department</option>
+<option *ngFor="let dept of departments" [value]="dept.id"> {{dept.name}}</option>
+</select>
+ </div>
+
+ 
+
+
+      <div class="form-group">
+        <label>Preference Contact</label>
+        <div class="form-control">
+          <label class="checkbox-inline">
+            <input type="checkbox" name="isActive"  [(ngModel)]="isActive">
+           Is Active
+          </label>
+          
         </div>
       </div>
 <div class="form-group">
